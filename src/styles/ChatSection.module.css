@@ -1,251 +1,266 @@
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--textcol);
+  background-color: var(--col2);
+}
+
+/* Chat Section */
+
 .chatSection {
-    background-color: var(--col2);
-    height: 100vh;
-    padding: 0px 20px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem;
+  justify-content: space-between;
 }
 
 .chatGptVersion {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: 10%;
-    color: var(--textcol);
-    font-size: 25px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  font-size: 1.5rem;
+  gap: 1rem;
 }
 
 .chatGptVersion svg {
-    width: 20px;
-    height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
+/* No Chat Section */
 
 .nochat {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: var(--textcol);
-    font-size: 25px;
-    height: 70%;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70%;
+  position: relative;
 }
 
-.nochat .sec1 {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+.nochat.sec1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
 }
 
-.nochat .sec1 h1 {
-    font-size: 30px;
-    font-weight: 400;
+.nochat.sec2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 2rem;
+  justify-content: center;
 }
 
-.nochat .sec2 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    gap: 20px;
-    justify-content: center;
+.nochat.suggestionCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #909090;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 1rem;
 }
 
-.nochat .suggestionCard {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #909090;
-    padding: 10px;
-    width: 400px;
-    border-radius: 10px;
-
+.nochat.suggestionCard h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.nochat .suggestionCard h2 {
-    font-size: 20px;
-    font-weight: 400;
-
+.nochat.suggestionCard p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #909090;
 }
 
-.nochat .suggestionCard p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #909090;
-}
+/* Bottom Section */
 
 .bottomsection {
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
 }
-
 
 .bottomsection svg {
-    width: 25px;
-    height: 25px;
-    background-color: #909090;
-    padding: 5px;
-    border-radius: 5px;
+  width: 2rem;
+  height: 2rem;
+  background-color: #909090;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
-
 
 .bottomsection svg:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #909090;
+  cursor: pointer;
+  background-color: white;
+  color: #909090;
 }
 
-.bottomsection .messageFlied {
-    border: 1px solid #909090;
-    align-items: center;
-    display: flex;
-    padding: 15px;
-    border-radius: 20px;
-    justify-content: space-between;
-    width: 80%;
+.bottomsection.messageFlied {
+  border: 1px solid #909090;
+  align-items: center;
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.bottomsection .messageFlied input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    color: var(--textcol);
+.bottomsection.messageFlied input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: var(--textcol);
+  width: 100%;
+}
+
+.bottomsection p {
+  color: #909090;
+  margin: 1rem;
+}
+
+/* Messages Section */
+
+.messages {
+  height: 70%;
+  width: 100%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+}
+
+.messages.message {
+  display: flex;
+  gap: 1rem;
+}
+
+.messages.message img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.messages.message div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.messages.message div h2 {
+  color: var(--textcol);
+font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.messages.message div p {
+  color: var(--textcol);
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .chatSection {
+    padding: 1rem;
+  }
+
+  .nochat.sec1 {
+    font-size: 1.2rem;
+  }
+
+  .nochat.suggestionCard {
     width: 100%;
-}
+  }
 
-.bottomsection p{
-    color: #909090;
-    margin: 20px;
-}
-
-.messages{
-    height: 70%;
+  .bottomsection.messageFlied {
     width: 100%;
-    padding-left: 10%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    overflow: auto;
-}
-
-
-.messages .message{
-    display: flex;
-    gap: 10px;
-}
-
-.messages .message img{
-    width: 35px;
-    height: 35px;
-}
-
-.messages .message div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.messages .message div h2{
-    color: var(--textcol);
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 5px;
-}
-
-
-.messages .message div p{
-    color: var(--textcol);
-    font-size: 15px;
-    max-width: 1000px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .chatGptVersion {
-      font-size: 18px;
-    }
-  
-    .messages {
-      padding-left: 5%;
-    }
   }
-  
-  @media only screen and (max-width: 992px) {
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 18px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
+
+  .messages {
+    padding-left: 1rem;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .chatGptVersion {
-      font-size: 16px;
-    }
-  
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 16px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
-  
-    .messages {
-      padding-left: 5%;
-    }
+}
+
+@media screen and (max-width: 992px) {
+  .chatGptVersion {
+    font-size: 1.2rem;
   }
-  
-  @media only screen and (max-width: 576px) {
-    .chatGptVersion {
-      font-size: 14px;
-    }
-  
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 14px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
-  
-    .messages {
-      padding-left: 2%;
-    }
+
+  .nochat.sec1 {
+    font-size: 1.2rem;
   }
+
+  .nochat.suggestionCard {
+    width: 100%;
+  }
+
+  .bottomsection.messageFlied {
+    width: 100%;
+  }
+
+  .messages {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chatGptVersion {
+    font-size: 1.1rem;
+  }
+
+  .nochat.sec1 {
+    font-size: 1.1rem;
+  }
+
+  .nochat.suggestionCard {
+    width: 100%;
+  }
+
+  .bottomsection.messageFlied {
+    width: 100%;
+  }
+
+  .messages {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .chatGptVersion {
+    font-size: 1rem;
+  }
+
+  .nochat.sec1 {
+    font-size: 1rem;
+  }
+
+  .nochat.suggestionCard {
+    width: 100%;
+  }
+
+  .bottomsection.messageFlied {
+    width: 100%;
+  }
+
+  .messages {
+    padding-left: 1rem;
+  }
+}
