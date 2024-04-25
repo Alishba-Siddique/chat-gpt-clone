@@ -4,9 +4,6 @@ import  chatgptlogo from '@/assets/chatgptlogo.png';
 import Image from "next/image";
 import styles from '@/styles/HistorySection.module.css'
 
-interface HistorySectionProps {
-  onClose: () => void;
-}
 
 const allChats = [
   {
@@ -23,7 +20,7 @@ const allChats = [
   },
 ];
 
-const HistorySection: React.FC<HistorySectionProps> = ({ onClose }) => {
+const HistorySection = () => {
   return (
     <div className={styles.historySec}>
       <div className={styles.newChat}>
@@ -31,7 +28,7 @@ const HistorySection: React.FC<HistorySectionProps> = ({ onClose }) => {
           <Image src={chatgptlogo} alt='ChatGPT LOGO' width={50} height={50}/>
           <p className={styles.text1}>New chat</p>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" onClick={onClose}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
 

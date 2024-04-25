@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import HistorySection from './HistorySection';
 
-interface NavbarProps {
-  onClose: () => void;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ onClose }) => {
+const Navbar = () => {
   const [showHistory, setShowHistory] = useState(false);
   const [navbarVisible, setNavbarVisible] = useState(false);
 
@@ -26,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClose }) => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </div>
-      {showHistory && <HistorySection onClose={onClose} />}
+      {showHistory && <HistorySection/>}
     </div>
   );
 };
