@@ -1,251 +1,447 @@
 .chatSection {
-    background-color: var(--col2);
-    height: 100vh;
-    padding: 0px 20px;
-    justify-content: space-between;
+  background-color: var(--col2);
+  height: 100vh;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .chatGptVersion {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: 10%;
-    color: var(--textcol);
-    font-size: 25px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  color: var(--textcol);
+  font-size: 25px;
+  gap: 10px;
 }
 
 .chatGptVersion svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
-
 .nochat {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: var(--textcol);
-    font-size: 25px;
-    height: 70%;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--textcol);
+  font-size: 25px;
+  height: 70%;
+  position: relative;
 }
 
 .nochat .sec1 {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  top: 40%; /* adjust the top position for smaller screens */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* adjust the font size for smaller screens */
+  text-align: center; /* center the text horizontally */
 }
 
 .nochat .sec1 h1 {
-    font-size: 30px;
-    font-weight: 400;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .nochat .sec2 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 20px;
+  justify-content: center;
 }
 
 .nochat .suggestionCard {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #909090;
-    padding: 10px;
-    width: 400px;
-    border-radius: 10px;
-
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #909090;
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
 }
 
 .nochat .suggestionCard h2 {
-    font-size: 20px;
-    font-weight: 400;
-
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .nochat .suggestionCard p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #909090;
+  font-size: 16px;
+  font-weight: 400;
+  color: #909090;
 }
 
 .bottomsection {
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 }
-
 
 .bottomsection svg {
-    width: 25px;
-    height: 25px;
-    background-color: #909090;
-    padding: 5px;
-    border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: #909090;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-
 .bottomsection svg:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #909090;
+  cursor: pointer;
+  background-color: white;
+  color: #909090;
 }
 
 .bottomsection .messageFlied {
-    border: 1px solid #909090;
-    align-items: center;
-    display: flex;
-    padding: 15px;
-    border-radius: 20px;
-    justify-content: space-between;
-    width: 80%;
+  border: 1px solid #909090;
+  align-items: center;
+  display: flex;
+  padding: 15px;
+  border-radius: 20px;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .bottomsection .messageFlied input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    color: var(--textcol);
-    width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: var(--textcol);
+  width: 100%;
 }
 
-.bottomsection p{
-    color: #909090;
-    margin: 20px;
+.bottomsection p {
+  color: #909090;
+  margin: 20px;
 }
 
-.messages{
-    height: 70%;
-    width: 100%;
-    padding-left: 10%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    overflow: auto;
+.messages {
+  height: 70%;
+  width: 100%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow: auto;
 }
 
-
-.messages .message{
-    display: flex;
-    gap: 10px;
+.messages .message {
+  display: flex;
+  gap: 10px;
 }
 
-.messages .message img{
-    width: 35px;
-    height: 35px;
+.messages .message img {
+  width: 35px;
+  height: 35px;
 }
 
 .messages .message div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.messages .message div h2{
-    color: var(--textcol);
+
+.messages .message div h2 {
+  color: var(--textcol);
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.messages .message div p {
+  color: var(--textcol);
+  font-size: 15px;
+  max-width: 1000px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .chatSection {
+    padding: 0px 20px;
+  }
+
+  .chatGptVersion {
+    font-size: 25px;
+  }
+
+  .nochat .sec1 h1 {
+    font-size: 30px;
+  }
+
+  .nochat .suggestionCard {
+    width: 400px;
+    
+  }
+
+  .bottomsection .messageFlied {
+    width: 80%;
+  }
+
+  .messages .message div h2 {
     font-size: 20px;
-    font-weight: 500;
-    margin-top: 5px;
-}
+  }
 
-
-.messages .message div p{
-    color: var(--textcol);
+  .messages .message div p {
     font-size: 15px;
-    max-width: 1000px;
+  }
 }
 
-@media only screen and (max-width: 1200px) {
-    .chatGptVersion {
-      font-size: 18px;
-    }
+@media only screen and (max-width: 1400px) {
+  .chatSection {
+    padding: 0px 15px;
+  }
+
+  .chatGptVersion {
+    font-size: 23px;
+  }
+
+  .nochat .sec1 h1 {
+    font-size: 28px;
+  }
+
+  .nochat .suggestionCard {
+    width: 350px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 75%;
+  }
+
+  .messages .message div h2 {
+    font-size: 18px;
+  }
+
+  .messages .message div p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .chatSection {
+    padding: 0px 10px;
+  }
+
+  .chatGptVersion {
+    font-size: 20px;
+  }
+
+  .nochat .sec1 h1 {
+    font-size: 25px;
+  }
+
+  .nochat .suggestionCard {
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 70%;
+  }
+
+  .messages .message div h2 {
+    font-size: 16px;
+  }
+
+  .messages .message div p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .chatSection {
+    padding: 0px 5px;
+  }
+
+  .chatGptVersion {
+    font-size: 18px;
+  }
+
+  .nochat .sec1 h1 {
+    font-size: 20px;
+  }
+
+  .nochat .suggestionCard {
+    width: 250px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 65%;
+  }
+
+  .messages .message div h2 {
+    font-size: 14px;
+  }
+
+  .messages .message div p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .chatSection {
+    padding: 0px 2px;
+  }
+
+  .chatGptVersion {
+    font-size: 16px;
+  }
+
+  .nochat .sec1 h1 {
+    font-size: 18px;
+  }
+
+  .nochat .suggestionCard {
+    width: 200px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 60%;
+  }
+
+  .messages .message div h2 {
+    font-size: 12px;
+  }
+
+  .messages .message div p {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .chatSection {
+    padding: 0px 1px;
+  }
+
+  .chatGptVersion {
+    font-size: 14px;
+  }
+
+  .nochat .sec1{
+    font-size: 16px;
+    top: 10%;
+  }
+
+  .nochat .sec2 {
+    margin-top: 80px; /* adjust the margin top value as needed */
+  }
+
+  .nochat .suggestionCard {
+    width: 150px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 55%;
+  }
+
+  .messages .message div h2 {
+    font-size: 10px;
+  }
+
+  .messages .message div p {
+    font-size: 6px;
+  }
+
+  .nochat .suggestionCard h2 {
+    font-size: 16px;
+  }
+
+  .nochat .suggestionCard p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .chatSection {
+    padding: 0px 0px;
+  }
+
+  .chatGptVersion {
+    font-size: 12px;
+  }
+
+  .nochat .sec1{
+    font-size: 14px;
+    top: 15%;
+  }
+
+  .nochat .sec2 {
+    margin-top: 90px; /* adjust the margin top value as needed */
+  }
+
   
-    .messages {
-      padding-left: 5%;
-    }
+
+  .nochat .suggestionCard {
+    width: 100px;
+  }
+
+  .nochat .suggestionCard h2 {
+    font-size: 14px;
+  }
+
+  .nochat .suggestionCard p {
+    font-size: 12px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 50%;
+  }
+
+  .messages .message div h2 {
+    font-size: 10px;
+  }
+
+  .messages .message div p {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 312px) {
+  .chatSection {
+    padding: 0px 0px;
+  }
+
+  .chatGptVersion {
+    font-size: 10px;
+  }
+
+  .nochat .sec1 {
+    font-size: 12px;
+    top: 20%;
   }
   
-  @media only screen and (max-width: 992px) {
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 18px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
+  .nochat .sec2 {
+    margin-top: 100px; /* adjust the margin top value as needed */
   }
-  
-  @media only screen and (max-width: 768px) {
-    .chatGptVersion {
-      font-size: 16px;
-    }
-  
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 16px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
-  
-    .messages {
-      padding-left: 5%;
-    }
+
+  .nochat .suggestionCard {
+    width: 100px;
   }
-  
-  @media only screen and (max-width: 576px) {
-    .chatGptVersion {
-      font-size: 14px;
-    }
-  
-    .nochat .sec1 {
-      top: 50%;
-      font-size: 14px;
-    }
-  
-    .nochat .suggestionCard {
-      width: 100%;
-    }
-  
-    .bottomsection .messageFlied {
-      width: 100%;
-    }
-  
-    .bottomsection p {
-      margin: 10px;
-    }
-  
-    .messages {
-      padding-left: 2%;
-    }
+
+  .nochat .suggestionCard h2 {
+    font-size: 12px;
   }
+
+  .nochat .suggestionCard p {
+    font-size: 10px;
+  }
+
+  .bottomsection .messageFlied {
+    width: 50%;
+  }
+
+  .messages .message div h2 {
+    font-size: 8px;
+  }
+
+  .messages .message div p {
+    font-size: 4px;
+  }
+}
